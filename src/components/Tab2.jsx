@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setTab2Data } from '../utils/tab2Slice'; 
+import { setTab2Data } from "../utils/tab2slice"
 import Tab3 from "./Tab3";
 import APIResults from "./APIResults";
 
