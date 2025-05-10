@@ -1,16 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Header from './components/Header';
+import Tab3 from './components/Tab3';
+import Wikipedia from './components/Tab1';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import ShowData from './components/Tab2'; 
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const route = createBrowserRouter([
+        {
+          path: "/",
+          element: <Header />, 
+        },
+        {
+          path: "/tab3",
+          element: <Tab3 />,
+        },
+  ]);
 
   return (
-    <>
-      <h1 className='text-3xl text-gray-400̀'>Starting the task</h1>
-    </>
-  )
+     <Provider store={store}> 
+      <RouterProvider router={route} />
+     </Provider>
+  );
 }
 
-export default App
+export default App;
