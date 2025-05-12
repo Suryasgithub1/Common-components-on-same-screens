@@ -14,10 +14,7 @@ function App() {
           path: "/",
           element: <Header />, 
         },
-        {
-          path: "/tab3",
-          element: <Tab3 />,
-        },
+
   ]);
 
   return (

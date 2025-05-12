@@ -6,7 +6,7 @@ const Tab5 = () => {
 
   return (
     <div className="flex flex-col align-center justify-center items-center mt-10">
-      <h2 className="text-xl font-bold mb-4">Tab 5 - Increment Buttons</h2>
+      <h2 className="text-xl font-bold mb-4"> Increment Buttons</h2>
 
       <div className="flex gap-4">
         <button

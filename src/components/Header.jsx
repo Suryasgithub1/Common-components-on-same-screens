@@ -18,7 +18,7 @@ const Header = () => {
             case 'Wikipedia':
                 return <Tab1 />;
             case 'Show Data':
-                return <Tab2 />;
+                return <Tab2 handleClick={handleClick}/>;
             case 'Recursive Function':
                 return <Tab3 />; 
             case 'Your Notepad':
@@ -40,7 +40,7 @@ const Header = () => {
                 <button onClick={handleClick} className='p-2 hover:bg-gray-300 active:bg-gray-400 w-max-content rounded-xl'>Your Notepad</button>
                 <button onClick={handleClick} className='p-2 mx-10 hover:bg-gray-300 active:bg-gray-400 w-max-content rounded-xl'>Count</button>
             </div>
-            {showComponent && renderComponent()}
+            {showComponent ? renderComponent() : <Tab1 />}
         </div>
     );
 };
